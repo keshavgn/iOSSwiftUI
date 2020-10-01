@@ -13,7 +13,13 @@ struct ContentView: View {
     NavigationView {
       List {
         ForEach (items) { item in
-          HomeCellView(item: item)
+          if item.name == "Movies" {
+            MovieCellView(item: item)
+          } else if item.name == "Employee Database" {
+            EmployeesCellView(item: item)
+          } else if item.name == "Weather" {
+            WeatherCellView(item: item)
+          }
         }
       }
       .navigationBarTitle(Text("iOS SwiftUI App"))
@@ -21,7 +27,7 @@ struct ContentView: View {
   }
 }
 
-struct HomeCellView: View {
+struct MovieCellView: View {
   var item: Item
   var body: some View {
     NavigationLink (destination: MovieList().environmentObject(UserStore())) {
@@ -29,6 +35,25 @@ struct HomeCellView: View {
     }
   }
 }
+
+struct EmployeesCellView: View {
+  var item: Item
+  var body: some View {
+    NavigationLink (destination: EmployeesView(store: Store(employees: employees))) {
+      Text(item.name)
+    }
+  }
+}
+
+struct WeatherCellView: View {
+  var item: Item
+  var body: some View {
+    NavigationLink (destination: WeeklyWeatherView(viewModel: WeeklyWeatherViewModel(weatherFetcher: WeatherFetcher()))) {
+      Text(item.name)
+    }
+  }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
@@ -41,4 +66,4 @@ struct Item: Identifiable {
   var name: String
 }
 
-let items = [Item(name: "Movies")]
+let items = [Item(name: "Movies"), Item(name: "Employee Database"), Item(name: "Weather")]

@@ -22,13 +22,13 @@ struct MovieList: View {
       .onDelete(perform: movieStore.deleteMovie)
     }
     .sheet(isPresented: $isPresented) {
-      AddMovie(movieStore: self.movieStore, showModal: self.$isPresented)
+      AddMovie(movieStore: self.movieStore, showModal: self.$isPresented).environmentObject(self.userStore)
     }
-    .navigationBarTitle(Text("Movies"))
+    .navigationBarTitle(Text("Movies"), displayMode: .inline)
     .navigationBarItems(
       trailing:
       HStack {
-        NavigationLink(destination: UserView()) {
+        NavigationLink(destination: UserView().environmentObject(self.userStore)) {
           HStack {
             userStore.currentUserInfo.map { Text($0.userName) }
             Image(systemName: "person.fill")
