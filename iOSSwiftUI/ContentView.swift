@@ -19,6 +19,8 @@ struct ContentView: View {
             EmployeesCellView(item: item)
           } else if item.name == "Weather" {
             WeatherCellView(item: item)
+          } else if item.name == "CustomDesigns" {
+              CustomDesignsCellView(item: item)
           }
         }
       }
@@ -54,6 +56,14 @@ struct WeatherCellView: View {
   }
 }
 
+struct CustomDesignsCellView: View {
+  var item: Item
+  var body: some View {
+    NavigationLink (destination: CustomDesignsView()) {
+      Text(item.name)
+    }
+  }
+}
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
@@ -66,4 +76,5 @@ struct Item: Identifiable {
   var name: String
 }
 
-let items = [Item(name: "Movies"), Item(name: "Employee Database"), Item(name: "Weather")]
+let items = [Item(name: "Movies"), Item(name: "Employee Database"),
+             Item(name: "Weather"), Item(name: "CustomDesigns")]
