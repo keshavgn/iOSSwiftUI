@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dione.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
