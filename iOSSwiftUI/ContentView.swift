@@ -9,26 +9,52 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State var showSplash = true
+  
+  init() {
+    //Use this if NavigationBarTitle is with Large Font
+    if let theme = UIColor(named: "theme") {
+      UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: theme]
+      UINavigationBar.appearance().backgroundColor = theme
+      UINavigationBar.appearance().tintColor = .red
+      
+      //Use this if NavigationBarTitle is with displayMode = .inline
+      UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: theme]
+    }
+  }
+  
   var body: some View {
-    NavigationView {
-      List {
-        ForEach (items) { item in
-          if item.name == "Movies" {
-            MovieCellView(item: item)
-          } else if item.name == "Employee Database" {
-            EmployeesCellView(item: item)
-          } else if item.name == "Weather" {
-            WeatherCellView(item: item)
-          } else if item.name == "CustomDesigns" {
-            CustomDesignsCellView(item: item)
-          } else if item.name == "Animations" {
-            AnimationsCellView(item: item)
-          } else if item.name == "Charts" {
+    ZStack {
+      NavigationView {
+        List {
+          ForEach (items) { item in
+            if item.name == "Movies" {
+              MovieCellView(item: item)
+            } else if item.name == "Employee Database" {
+              EmployeesCellView(item: item)
+            } else if item.name == "Weather" {
+              WeatherCellView(item: item)
+            } else if item.name == "CustomDesigns" {
+              CustomDesignsCellView(item: item)
+            } else if item.name == "Animations" {
+              AnimationsCellView(item: item)
+            } else if item.name == "Charts" {
               ChartsCellView(item: item)
+            }
           }
         }
+        .navigationBarTitle(Text("iOS SwiftUI App"), displayMode: .inline)
       }
-      .navigationBarTitle(Text("iOS SwiftUI App"))
+      SplashScreen()
+        .opacity(showSplash ? 1 : 0)
+        .onAppear {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            SplashScreen.shouldAnimate = false
+            withAnimation() {
+              self.showSplash = false
+            }
+          }
+      }
     }
   }
 }

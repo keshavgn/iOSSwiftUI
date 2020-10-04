@@ -50,6 +50,7 @@
 		824F8BF12529DA9A005934CE /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BEF2529DA9A005934CE /* Movie+CoreDataProperties.swift */; };
 		824F8BF82529EACC005934CE /* UserInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BF62529EACC005934CE /* UserInfo+CoreDataClass.swift */; };
 		824F8BF92529EACC005934CE /* UserInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BF72529EACC005934CE /* UserInfo+CoreDataProperties.swift */; };
+		824F8BFB2529F7D8005934CE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BFA2529F7D7005934CE /* SplashScreen.swift */; };
 		8259193A2523A8EA00E4460F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825919392523A8EA00E4460F /* AppDelegate.swift */; };
 		8259193C2523A8EA00E4460F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259193B2523A8EA00E4460F /* SceneDelegate.swift */; };
 		8259193E2523A8EA00E4460F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259193D2523A8EA00E4460F /* ContentView.swift */; };
@@ -148,6 +149,7 @@
 		824F8BEF2529DA9A005934CE /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		824F8BF62529EACC005934CE /* UserInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		824F8BF72529EACC005934CE /* UserInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		824F8BFA2529F7D7005934CE /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		825919362523A8EA00E4460F /* iOSSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		825919392523A8EA00E4460F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8259193B2523A8EA00E4460F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				825919392523A8EA00E4460F /* AppDelegate.swift */,
 				8259193B2523A8EA00E4460F /* SceneDelegate.swift */,
 				8259193D2523A8EA00E4460F /* ContentView.swift */,
+				824F8BFA2529F7D7005934CE /* SplashScreen.swift */,
 				825919962525061D00E4460F /* Utilities */,
 				8259198D2524C74100E4460F /* Employee Database */,
 				825919692523ABEB00E4460F /* Movie */,
@@ -690,6 +693,7 @@
 				825919BA2525062E00E4460F /* CurrentWeatherView.swift in Sources */,
 				825919BD2525062E00E4460F /* Responses.swift in Sources */,
 				824F8BA72527B380005934CE /* MoonList.swift in Sources */,
+				824F8BFB2529F7D8005934CE /* SplashScreen.swift in Sources */,
 				824F8BC42528F1DE005934CE /* StationHeader.swift in Sources */,
 				825919932524C75700E4460F /* DetailView.swift in Sources */,
 				824F8BEB2529D604005934CE /* Movies.xcdatamodeld in Sources */,

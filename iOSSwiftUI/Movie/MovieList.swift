@@ -36,7 +36,7 @@ struct MovieList: View {
     .sheet(isPresented: $isPresented) {
       AddMovie(movieStore: self.movieStore, showModal: self.$isPresented)
     }
-    .navigationBarTitle(Text("Movies"), displayMode: .inline)
+    .navigationBarTitle(Text("Movie List"), displayMode: .inline)
     .navigationBarItems(
       trailing:
       HStack {
