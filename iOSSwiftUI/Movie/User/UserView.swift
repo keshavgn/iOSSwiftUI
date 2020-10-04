@@ -9,11 +9,16 @@
 import SwiftUI
 
 struct UserView: View {
-  @EnvironmentObject var userStore: UserStore
   @State private var userName = ""
   @State private var favoriteGenre = ""
   @Environment(\.presentationMode) var presentationMode
   
+  @FetchRequest(entity: UserInfo.entity(), sortDescriptors: [
+      NSSortDescriptor(keyPath: \UserInfo.name, ascending: true)
+    ]
+  )
+  var user: FetchedResults<UserInfo>
+
   var body: some View {
     NavigationView {
       Form {
@@ -33,14 +38,19 @@ struct UserView: View {
         }
     )
     .onAppear {
-      self.userName = self.userStore.currentUserInfo?.userName ?? ""
-      self.favoriteGenre = self.userStore.currentUserInfo?.favoriteGenre ?? ""
+      self.userName = self.user.first?.name ?? ""
+//      self.favoriteGenre = self.userStore.currentUserInfo?.favoriteGenre ?? ""
     }
   }
 
   func updateUserInfo() {
-    let newUserInfo = UserInfo(userName: userName, favoriteGenre: favoriteGenre)
-    userStore.currentUserInfo = newUserInfo
+    if let user = self.user.first {
+      user.name = userName
+    } else {
+      let newUserInfo = UserInfo(context: CoreDataManager.shared.context)
+      newUserInfo.name = userName
+    }
+    CoreDataManager.shared.saveContext()
     presentationMode.wrappedValue.dismiss()
   }
 }

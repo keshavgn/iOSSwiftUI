@@ -9,15 +9,14 @@
 import SwiftUI
 
 struct AddMovie: View {
-  @EnvironmentObject var userStore: UserStore
-  static let defaultMovieTitle = "An untitled masterpiece"
-  static let defaultMovieGenre = Movie.possibleGenres.first ?? "Genre-buster"
+  static let DefaultMovieTitle = "An untitled masterpiece"
+  static let DefaultMovieGenre = "Genre-buster"
 
   let movieStore: MovieStore
   @Binding var showModal: Bool
   @State private var title = ""
   @State private var genre = ""
-  @State private var rating: Double = 0
+  @State private var releaseDate = Date()
 
   var body: some View {
     NavigationView {
@@ -26,29 +25,25 @@ struct AddMovie: View {
           TextField("Title", text: $title)
         }
         Section(header: Text("Genre")) {
-          GenrePicker(genre: $genre)
+          TextField("Genre", text: $genre)
         }
-        Section(header: Text("Rating")) {
-          Slider(value: $rating, in: 0...5, step: 0.5)
-          RatingView(rating: rating)
+        Section {
+          DatePicker(
+            selection: $releaseDate,
+            displayedComponents: .date) { Text("Release Date").foregroundColor(Color(.gray)) }
+        }
+        Section {
+          Button(action: addMoveAction) {
+            Text("Add Movie")
+          }
         }
       }
       .navigationBarTitle(Text("Add Movie"), displayMode: .inline)
-      .navigationBarItems(
-        trailing:
-          Button(action: addMovie) {
-            Text("Add")
-          }
-      )
-      .onAppear { self.genre = self.userStore.currentUserInfo?.favoriteGenre ?? "" }
     }
   }
 
-  private func addMovie() {
-    movieStore.addMovie(
-      title: title.isEmpty ? AddMovie.defaultMovieTitle : title,
-      genre: genre.isEmpty ? AddMovie.defaultMovieGenre : genre,
-      rating: rating)
+  private func addMoveAction() {
+    movieStore.addMovie(title: title, genre: genre, releaseDate: releaseDate)
 
     showModal.toggle()
   }

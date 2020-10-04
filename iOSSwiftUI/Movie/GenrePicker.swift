@@ -13,7 +13,7 @@ struct GenrePicker: View {
 
   var body: some View {
     Picker(selection: $genre, label: Spacer()) {
-      ForEach(Movie.possibleGenres, id: \.self) {
+      ForEach(["Action, Comedy", "Action, Adventure"], id: \.self) {
         Text($0)
       }
     }

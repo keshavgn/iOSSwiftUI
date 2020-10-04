@@ -11,18 +11,22 @@ import SwiftUI
 struct MovieRow: View {
   let movie: Movie
 
+  static let releaseFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .long
+    return formatter
+  }()
+
   var body: some View {
-    HStack {
-      VStack(alignment: .leading) {
-        Text(movie.title)
-          .font(.title)
-        Text(movie.genre)
+    VStack(alignment: .leading) {
+      movie.title.map(Text.init)
+        .font(.title)
+      HStack {
+        movie.genre.map(Text.init)
           .font(.caption)
-      }
-      Spacer()
-      VStack(alignment: .trailing) {
         Spacer()
-        RatingView(rating: movie.rating)
+        movie.releaseDate.map { Text(Self.releaseFormatter.string(from: $0)) }
+          .font(.caption)
       }
     }
   }

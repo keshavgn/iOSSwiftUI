@@ -35,8 +35,10 @@ struct ContentView: View {
 
 struct MovieCellView: View {
   var item: Item
+  let context = CoreDataManager.shared.persistentContainer.viewContext
+  
   var body: some View {
-    NavigationLink (destination: MovieList().environmentObject(UserStore())) {
+    NavigationLink (destination: MovieList().environment(\.managedObjectContext, context)) {
       Text(item.name)
     }
   }

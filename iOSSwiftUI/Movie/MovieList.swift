@@ -8,29 +8,41 @@
 
 import SwiftUI
 
-// swiftlint:disable multiple_closures_with_trailing_closure
 struct MovieList: View {
-  @EnvironmentObject var userStore: UserStore
   @ObservedObject var movieStore = MovieStore()
   @State private var isPresented = false
+  @Environment(\.managedObjectContext) var managedObjectContext
   
+  @FetchRequest(entity: Movie.entity(), sortDescriptors: [
+      NSSortDescriptor(keyPath: \Movie.title, ascending: true)
+    ]
+  )
+//  , predicate: NSPredicate(format: "genre contains 'Action'"))
+  var movies: FetchedResults<Movie>
+  
+  @FetchRequest(entity: UserInfo.entity(), sortDescriptors: [
+      NSSortDescriptor(keyPath: \UserInfo.name, ascending: true)
+    ]
+  )
+  var user: FetchedResults<UserInfo>
+
   var body: some View {
     List {
-      ForEach(movieStore.movies, id: \.title) {
+      ForEach(movies, id: \.title) {
         MovieRow(movie: $0)
       }
-      .onDelete(perform: movieStore.deleteMovie)
+      .onDelete(perform: deleteMovie)
     }
     .sheet(isPresented: $isPresented) {
-      AddMovie(movieStore: self.movieStore, showModal: self.$isPresented).environmentObject(self.userStore)
+      AddMovie(movieStore: self.movieStore, showModal: self.$isPresented)
     }
     .navigationBarTitle(Text("Movies"), displayMode: .inline)
     .navigationBarItems(
       trailing:
       HStack {
-        NavigationLink(destination: UserView().environmentObject(self.userStore)) {
+        NavigationLink(destination: UserView()) {
           HStack {
-            userStore.currentUserInfo.map { Text($0.userName) }
+            Text(user.first?.name ?? "")
             Image(systemName: "person.fill")
           }
         }
@@ -40,6 +52,12 @@ struct MovieList: View {
         }
       }
     )
+  }
+  
+  func deleteMovie(at offsets: IndexSet) {
+    offsets.forEach { index in
+      movieStore.deleteMovie(movie: movies[index])
+    }
   }
 }
 
