@@ -40,6 +40,8 @@ struct ContentView: View {
               AnimationsCellView(item: item)
             } else if item.name == "Charts" {
               ChartsCellView(item: item)
+            } else if item.name == "Viper" {
+              ViperHomeCellView(item: item)
             }
           }
         }
@@ -115,6 +117,15 @@ struct ChartsCellView: View {
   }
 }
 
+struct ViperHomeCellView: View {
+  var item: Item
+  var body: some View {
+    NavigationLink (destination: ViperHomeView().environmentObject(DataModel.sample)) {
+      Text(item.name)
+    }
+  }
+}
+
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
@@ -128,4 +139,5 @@ struct Item: Identifiable {
 
 let items = [Item(name: "Movies"), Item(name: "Employee Database"),
              Item(name: "Weather"), Item(name: "CustomDesigns"),
-             Item(name: "Animations"), Item(name: "Charts")]
+             Item(name: "Animations"), Item(name: "Charts"),
+             Item(name: "Viper")]

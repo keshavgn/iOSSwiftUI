@@ -1,0 +1,38 @@
+//
+//  TripMapViewPresenter.swift
+//  iOSSwiftUI
+//
+//  Created by keshav gn on 07/10/20.
+//  Copyright © 2020 keshav gn. All rights reserved.
+//
+
+import Foundation
+import MapKit
+import Combine
+
+class TripMapViewPresenter: ObservableObject {
+  @Published var pins: [MKAnnotation] = []
+  @Published var routes: [MKRoute] = []
+
+  let interactor: TripDetailInteractor
+  private var cancellables = Set<AnyCancellable>()
+
+  init(interactor: TripDetailInteractor) {
+    self.interactor = interactor
+
+    interactor.$waypoints
+      .map {
+        $0.map {
+          let annotation = MKPointAnnotation()
+          annotation.coordinate = $0.location
+          return annotation
+        }
+    }
+    .assign(to: \.pins, on: self)
+    .store(in: &cancellables)
+
+    interactor.$directions
+      .assign(to: \.routes, on: self)
+      .store(in: &cancellables)
+  }
+}

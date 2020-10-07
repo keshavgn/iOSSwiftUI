@@ -51,6 +51,29 @@
 		824F8BF82529EACC005934CE /* UserInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BF62529EACC005934CE /* UserInfo+CoreDataClass.swift */; };
 		824F8BF92529EACC005934CE /* UserInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BF72529EACC005934CE /* UserInfo+CoreDataProperties.swift */; };
 		824F8BFB2529F7D8005934CE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8BFA2529F7D7005934CE /* SplashScreen.swift */; };
+		824F8C26252B897E005934CE /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C17252B897D005934CE /* DataModel.swift */; };
+		824F8C27252B897E005934CE /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C18252B897D005934CE /* Waypoint.swift */; };
+		824F8C28252B897E005934CE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C19252B897D005934CE /* Trip.swift */; };
+		824F8C2A252B897E005934CE /* SplitImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C1C252B897E005934CE /* SplitImage.swift */; };
+		824F8C2B252B897E005934CE /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C1D252B897E005934CE /* TripListCell.swift */; };
+		824F8C2C252B897E005934CE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C1F252B897E005934CE /* Persistence.swift */; };
+		824F8C2D252B897E005934CE /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C20252B897E005934CE /* ImageDataProvider.swift */; };
+		824F8C2E252B897E005934CE /* MapDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C21252B897E005934CE /* MapDataProvider.swift */; };
+		824F8C2F252B897E005934CE /* WaypointViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C23252B897E005934CE /* WaypointViewPresenter.swift */; };
+		824F8C30252B897E005934CE /* WaypointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C24252B897E005934CE /* WaypointView.swift */; };
+		824F8C31252B897E005934CE /* WaypointViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C25252B897E005934CE /* WaypointViewInteractor.swift */; };
+		824F8C34252B89D5005934CE /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = 824F8C33252B89D5005934CE /* default.json */; };
+		824F8C36252B89EB005934CE /* ViperHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C35252B89EB005934CE /* ViperHomeView.swift */; };
+		824F8C40252CDFB8005934CE /* TripListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C3F252CDFB8005934CE /* TripListPresenter.swift */; };
+		824F8C42252CDFEC005934CE /* TripListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C41252CDFEC005934CE /* TripListInteractor.swift */; };
+		824F8C44252CE121005934CE /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C43252CE121005934CE /* TripListView.swift */; };
+		824F8C47252CE53E005934CE /* TripDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C46252CE53E005934CE /* TripDetailInteractor.swift */; };
+		824F8C49252CE551005934CE /* TripDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C48252CE551005934CE /* TripDetailPresenter.swift */; };
+		824F8C4B252CE55E005934CE /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C4A252CE55E005934CE /* TripDetailView.swift */; };
+		824F8C4D252CE5E6005934CE /* TripListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C4C252CE5E6005934CE /* TripListRouter.swift */; };
+		824F8C58252E27F1005934CE /* TripMapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C57252E27F1005934CE /* TripMapViewPresenter.swift */; };
+		824F8C5A252E282F005934CE /* TripMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C59252E282F005934CE /* TripMapView.swift */; };
+		824F8C5C252E2CEB005934CE /* TripDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F8C5B252E2CEB005934CE /* TripDetailRouter.swift */; };
 		8259193A2523A8EA00E4460F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825919392523A8EA00E4460F /* AppDelegate.swift */; };
 		8259193C2523A8EA00E4460F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259193B2523A8EA00E4460F /* SceneDelegate.swift */; };
 		8259193E2523A8EA00E4460F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259193D2523A8EA00E4460F /* ContentView.swift */; };
@@ -150,6 +173,29 @@
 		824F8BF62529EACC005934CE /* UserInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		824F8BF72529EACC005934CE /* UserInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		824F8BFA2529F7D7005934CE /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		824F8C17252B897D005934CE /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		824F8C18252B897D005934CE /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		824F8C19252B897D005934CE /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		824F8C1C252B897E005934CE /* SplitImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitImage.swift; sourceTree = "<group>"; };
+		824F8C1D252B897E005934CE /* TripListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
+		824F8C1F252B897E005934CE /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		824F8C20252B897E005934CE /* ImageDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
+		824F8C21252B897E005934CE /* MapDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDataProvider.swift; sourceTree = "<group>"; };
+		824F8C23252B897E005934CE /* WaypointViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointViewPresenter.swift; sourceTree = "<group>"; };
+		824F8C24252B897E005934CE /* WaypointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointView.swift; sourceTree = "<group>"; };
+		824F8C25252B897E005934CE /* WaypointViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointViewInteractor.swift; sourceTree = "<group>"; };
+		824F8C33252B89D5005934CE /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
+		824F8C35252B89EB005934CE /* ViperHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperHomeView.swift; sourceTree = "<group>"; };
+		824F8C3F252CDFB8005934CE /* TripListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListPresenter.swift; sourceTree = "<group>"; };
+		824F8C41252CDFEC005934CE /* TripListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListInteractor.swift; sourceTree = "<group>"; };
+		824F8C43252CE121005934CE /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		824F8C46252CE53E005934CE /* TripDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailInteractor.swift; sourceTree = "<group>"; };
+		824F8C48252CE551005934CE /* TripDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailPresenter.swift; sourceTree = "<group>"; };
+		824F8C4A252CE55E005934CE /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		824F8C4C252CE5E6005934CE /* TripListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRouter.swift; sourceTree = "<group>"; };
+		824F8C57252E27F1005934CE /* TripMapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewPresenter.swift; sourceTree = "<group>"; };
+		824F8C59252E282F005934CE /* TripMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapView.swift; sourceTree = "<group>"; };
+		824F8C5B252E2CEB005934CE /* TripDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailRouter.swift; sourceTree = "<group>"; };
 		825919362523A8EA00E4460F /* iOSSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		825919392523A8EA00E4460F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8259193B2523A8EA00E4460F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +345,101 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		824F8C15252B8961005934CE /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C35252B89EB005934CE /* ViperHomeView.swift */,
+				824F8C5D252E2E63005934CE /* TripMapView */,
+				824F8C56252E27D5005934CE /* TripDetail */,
+				824F8C45252CE520005934CE /* TripList */,
+				824F8C1E252B897E005934CE /* Data Sources */,
+				824F8C16252B897D005934CE /* Entities */,
+				824F8C1A252B897D005934CE /* Functional Views */,
+				824F8C22252B897E005934CE /* WaypointModule */,
+			);
+			path = Viper;
+			sourceTree = "<group>";
+		};
+		824F8C16252B897D005934CE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C17252B897D005934CE /* DataModel.swift */,
+				824F8C18252B897D005934CE /* Waypoint.swift */,
+				824F8C19252B897D005934CE /* Trip.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		824F8C1A252B897D005934CE /* Functional Views */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C1C252B897E005934CE /* SplitImage.swift */,
+				824F8C1D252B897E005934CE /* TripListCell.swift */,
+			);
+			path = "Functional Views";
+			sourceTree = "<group>";
+		};
+		824F8C1E252B897E005934CE /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C1F252B897E005934CE /* Persistence.swift */,
+				824F8C20252B897E005934CE /* ImageDataProvider.swift */,
+				824F8C21252B897E005934CE /* MapDataProvider.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		824F8C22252B897E005934CE /* WaypointModule */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C23252B897E005934CE /* WaypointViewPresenter.swift */,
+				824F8C24252B897E005934CE /* WaypointView.swift */,
+				824F8C25252B897E005934CE /* WaypointViewInteractor.swift */,
+			);
+			path = WaypointModule;
+			sourceTree = "<group>";
+		};
+		824F8C32252B89BE005934CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C33252B89D5005934CE /* default.json */,
+				825919472523A8ED00E4460F /* Info.plist */,
+				825919442523A8ED00E4460F /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		824F8C45252CE520005934CE /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C3F252CDFB8005934CE /* TripListPresenter.swift */,
+				824F8C41252CDFEC005934CE /* TripListInteractor.swift */,
+				824F8C43252CE121005934CE /* TripListView.swift */,
+				824F8C4C252CE5E6005934CE /* TripListRouter.swift */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
+		824F8C56252E27D5005934CE /* TripDetail */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C48252CE551005934CE /* TripDetailPresenter.swift */,
+				824F8C4A252CE55E005934CE /* TripDetailView.swift */,
+				824F8C46252CE53E005934CE /* TripDetailInteractor.swift */,
+				824F8C5B252E2CEB005934CE /* TripDetailRouter.swift */,
+			);
+			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		824F8C5D252E2E63005934CE /* TripMapView */ = {
+			isa = PBXGroup;
+			children = (
+				824F8C57252E27F1005934CE /* TripMapViewPresenter.swift */,
+				824F8C59252E282F005934CE /* TripMapView.swift */,
+			);
+			path = TripMapView;
+			sourceTree = "<group>";
+		};
 		8259192D2523A8EA00E4460F = {
 			isa = PBXGroup;
 			children = (
@@ -333,9 +474,9 @@
 				824F8B39252798D4005934CE /* CustomDesigns */,
 				824F8B9D2527B370005934CE /* Animations */,
 				824F8BBE2528F1C9005934CE /* Charts */,
+				824F8C15252B8961005934CE /* Viper */,
 				8259193F2523A8ED00E4460F /* Assets.xcassets */,
-				825919442523A8ED00E4460F /* LaunchScreen.storyboard */,
-				825919472523A8ED00E4460F /* Info.plist */,
+				824F8C32252B89BE005934CE /* Resources */,
 				825919412523A8ED00E4460F /* Preview Content */,
 			);
 			path = iOSSwiftUI;
@@ -599,6 +740,7 @@
 			files = (
 				825919462523A8ED00E4460F /* LaunchScreen.storyboard in Resources */,
 				825919912524C75000E4460F /* Employees.xcassets in Resources */,
+				824F8C34252B89D5005934CE /* default.json in Resources */,
 				824F8BB92528E2ED005934CE /* Animations.xcassets in Resources */,
 				825919432523A8ED00E4460F /* Preview Assets.xcassets in Resources */,
 				825919402523A8ED00E4460F /* Assets.xcassets in Resources */,
@@ -627,6 +769,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824F8C2F252B897E005934CE /* WaypointViewPresenter.swift in Sources */,
+				824F8C30252B897E005934CE /* WaypointView.swift in Sources */,
 				825919BE2525062E00E4460F /* WeatherFetcher.swift in Sources */,
 				8259193A2523A8EA00E4460F /* AppDelegate.swift in Sources */,
 				825919752523ABEB00E4460F /* MovieStore.swift in Sources */,
@@ -644,54 +788,74 @@
 				825919742523ABEB00E4460F /* AddMovie.swift in Sources */,
 				824F8BAA2527B380005934CE /* PlanetInfo.swift in Sources */,
 				825919B52525062E00E4460F /* WeeklyWeatherViewModel.swift in Sources */,
+				824F8C58252E27F1005934CE /* TripMapViewPresenter.swift in Sources */,
 				824F8BD82528F47F005934CE /* MapView.swift in Sources */,
 				824F8BDE25299A54005934CE /* TemperatureChart.swift in Sources */,
 				824F8BD52528F1EE005934CE /* DayInfo.swift in Sources */,
 				825919B72525062E00E4460F /* DailyWeatherRowViewModel.swift in Sources */,
 				8259197A2523B24700E4460F /* GenrePicker.swift in Sources */,
 				824F8BC62528F1DE005934CE /* StationInfo.swift in Sources */,
+				824F8C2D252B897E005934CE /* ImageDataProvider.swift in Sources */,
 				824F8BA52527B380005934CE /* PlanetModel.swift in Sources */,
 				8259193C2523A8EA00E4460F /* SceneDelegate.swift in Sources */,
 				824F8BF92529EACC005934CE /* UserInfo+CoreDataProperties.swift in Sources */,
 				824F8BF12529DA9A005934CE /* Movie+CoreDataProperties.swift in Sources */,
 				824F8BCD2528F1E6005934CE /* TemperatureTab.swift in Sources */,
+				824F8C5A252E282F005934CE /* TripMapView.swift in Sources */,
+				824F8C47252CE53E005934CE /* TripDetailInteractor.swift in Sources */,
+				824F8C36252B89EB005934CE /* ViperHomeView.swift in Sources */,
 				824F8B4A252798D4005934CE /* TabBarView.swift in Sources */,
 				824F8BA92527B380005934CE /* MoonFlow.swift in Sources */,
 				824F8BBD2528F153005934CE /* DoubleExtension.swift in Sources */,
 				824F8BDC2529986C005934CE /* SnowfallChart.swift in Sources */,
 				824F8BCC2528F1E6005934CE /* SnowfallTab.swift in Sources */,
+				824F8C2C252B897E005934CE /* Persistence.swift in Sources */,
 				824F8BC52528F1DE005934CE /* ChartsView.swift in Sources */,
 				825919712523ABEB00E4460F /* RatingView.swift in Sources */,
+				824F8C5C252E2CEB005934CE /* TripDetailRouter.swift in Sources */,
+				824F8C2B252B897E005934CE /* TripListCell.swift in Sources */,
 				824F8BAB2527B380005934CE /* SolarSystem.swift in Sources */,
+				824F8C27252B897E005934CE /* Waypoint.swift in Sources */,
 				824F8BF82529EACC005934CE /* UserInfo+CoreDataClass.swift in Sources */,
+				824F8C4D252CE5E6005934CE /* TripListRouter.swift in Sources */,
 				825919B62525062E00E4460F /* DailyWeatherRow.swift in Sources */,
 				8259199F2525061D00E4460F /* ArrayExtension.swift in Sources */,
 				825919782523ABF800E4460F /* UserView.swift in Sources */,
+				824F8C31252B897E005934CE /* WaypointViewInteractor.swift in Sources */,
 				824F8B4C252798D4005934CE /* AccessoryView.swift in Sources */,
+				824F8C28252B897E005934CE /* Trip.swift in Sources */,
 				825919BB2525062E00E4460F /* CurrentWeatherRowViewModel.swift in Sources */,
 				824F8BCB2528F1E6005934CE /* PrecipitationTab.swift in Sources */,
+				824F8C42252CDFEC005934CE /* TripListInteractor.swift in Sources */,
 				824F8B552527A676005934CE /* UIColorExtension.swift in Sources */,
 				824F8BDA25299364005934CE /* PrecipitationChart.swift in Sources */,
 				8259193E2523A8EA00E4460F /* ContentView.swift in Sources */,
 				824F8B572527AB59005934CE /* ViewExtension.swift in Sources */,
+				824F8C2A252B897E005934CE /* SplitImage.swift in Sources */,
 				825919B32525062E00E4460F /* WeeklyWeatherView.swift in Sources */,
+				824F8C4B252CE55E005934CE /* TripDetailView.swift in Sources */,
 				824F8BA82527B380005934CE /* MoonView.swift in Sources */,
 				825919B92525062E00E4460F /* CurrentWeatherRow.swift in Sources */,
 				825919A12525061E00E4460F /* Formatters.swift in Sources */,
 				824F8B532527A676005934CE /* ColorExtension.swift in Sources */,
 				825919B42525062E00E4460F /* WeeklyWeatherBuilder.swift in Sources */,
+				824F8C26252B897E005934CE /* DataModel.swift in Sources */,
 				825919902524C75000E4460F /* Employees.swift in Sources */,
 				824F8BD62528F1EE005934CE /* WeatherInformation.swift in Sources */,
+				824F8C44252CE121005934CE /* TripListView.swift in Sources */,
 				824F8BED2529D6AE005934CE /* CoreDataManager.swift in Sources */,
 				825919952524C79600E4460F /* EmployeesView.swift in Sources */,
 				824F8BF02529DA9A005934CE /* Movie+CoreDataClass.swift in Sources */,
 				824F8B46252798D4005934CE /* AccessoryRowView.swift in Sources */,
+				824F8C2E252B897E005934CE /* MapDataProvider.swift in Sources */,
 				825919A22525061E00E4460F /* Parsing.swift in Sources */,
 				824F8B4F25279B22005934CE /* CustomDesignsView.swift in Sources */,
 				824F8B542527A676005934CE /* LinearGradientExtension.swift in Sources */,
 				825919732523ABEB00E4460F /* MovieList.swift in Sources */,
+				824F8C49252CE551005934CE /* TripDetailPresenter.swift in Sources */,
 				825919BA2525062E00E4460F /* CurrentWeatherView.swift in Sources */,
 				825919BD2525062E00E4460F /* Responses.swift in Sources */,
+				824F8C40252CDFB8005934CE /* TripListPresenter.swift in Sources */,
 				824F8BA72527B380005934CE /* MoonList.swift in Sources */,
 				824F8BFB2529F7D8005934CE /* SplashScreen.swift in Sources */,
 				824F8BC42528F1DE005934CE /* StationHeader.swift in Sources */,
